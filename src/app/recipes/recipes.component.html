@@ -1,0 +1,39 @@
+<div class="row">
+    <div class="col-md-6">
+        <div class="card card-primary">
+            <div class="card-header">
+               Recipy List
+            </div>
+            <!-- card-header -->
+            <div class="card-body">
+                <app-recipe-list (selectedRecipeWas)="selectedRecipe = $event" ></app-recipe-list>
+                <!-- -->
+           </div>
+           <!-- card-body -->
+          </div>
+          <!-- card -->
+    </div>
+    <!-- col -->
+    <div class="col-md-6">
+      <div class="card card-primary">
+        <div class="card-header">
+            Recipy Details
+        </div>
+        <!-- card-header -->
+        <div class="card-body">
+            <app-recipe-detail *ngIf="selectedRecipe else noProductFound" [recipe]="selectedRecipe"></app-recipe-detail>
+            <!-- -->
+            <ng-template #noProductFound>
+                <p>Please select a product</p>
+            </ng-template>
+       </div>
+       <!-- card-body -->
+      </div>
+      <!-- card -->
+   </div>
+   <!-- col -->
+  </div>
+  <!-- row -->
+
+
+
