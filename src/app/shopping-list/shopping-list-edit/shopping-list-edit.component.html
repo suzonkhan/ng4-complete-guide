@@ -1,1 +1,32 @@
-<p>shopping-list-edit works!</p>
+
+<div class="card">
+    <div class="card-header">
+        Add/Edit Ingredient
+    </div>
+    <div class="card-body">
+      
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="form-group">
+                        <label for="">Name</label>
+                        <input type="text" class="form-control" #inputIngredientName>
+                        <!-- {{ingredientName}} -->
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Amount</label>
+                        <input type="number" class="form-control" #inputIngredientPrice>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-end mt-3">
+                    <button class="btn btn-success m-2 ms-0" (click)="addIngredienToShop( )">Add </button>
+                    <button class="btn btn-warning m-2">Clear</button>
+                    <button class="btn btn-danger m-2 me-0">Delete</button>
+                </div>
+            </div>
+       
+    </div>
+</div>
